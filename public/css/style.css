@@ -50,9 +50,10 @@ b {
     letter-spacing: 0px;
     color: #FFFCF5;
     text-align: center;
-    margin-bottom: 0.5em;
-    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-top: 2em;
 }
+
 button {
     background: transparent;
     width: 34%;
