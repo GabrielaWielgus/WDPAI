@@ -37,41 +37,42 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    font: normal normal normal 40px/45px Arial;
-    letter-spacing: 0px;
-    color: #FFFCF5;
-
-    box-shadow: inset 0px 6px 6px #00000029;
     opacity: 0.87;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+    box-shadow: inset 0px 6px 6px #00000029;
     border-radius: 33px;
 }
 
 b {
-    font-size: 1.15em;
+    text-align: left;
+    font: normal normal normal 40px/45px Arial;
+    letter-spacing: 0px;
+    color: #FFFCF5;
     text-align: center;
-    margin-bottom: 1.3em;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
 }
 button {
     background: transparent;
     width: 34%;
-    height: 20%;
+    height: 30%;
     border: none;
-    margin: 1.5em;
-    line-height: 2.5em;
+    margin: 2em;
 }
 
 input {
     background: #223938 0% 0% no-repeat padding-box;
+    text-align: left;
+    font: normal normal normal 18px/21px Arial;
+    letter-spacing: 0px;
     color: #FFFCF5;
     border: none;
     padding: 1em;
-    margin: 1em;
+    margin: 0.3em;
     border-radius: 10px;
     top: 225px;
-    width: 50%;
+    width: 60%;
     height: 2%;
 }
 
@@ -97,7 +98,7 @@ input {
     }
 
     b {
-        font-size: 0.5em;
+        font-size: 150em;
         margin-bottom: 0.7em;
     }
     button {
