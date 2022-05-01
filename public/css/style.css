@@ -146,7 +146,7 @@ body.dark{
     list-style: none;
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .sidebar header .image,
@@ -162,7 +162,7 @@ body.dark{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .sidebar .icon{
@@ -195,8 +195,8 @@ body.dark{
     flex-direction: column;
 }
 header .image-text .name {
-    margin-top: 2px;
-    font-size: 18px;
+    margin-top: 30px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -399,7 +399,7 @@ form.add-walk{
 }
 
 form.add-walk li{
-    height: 25px;
+    height: 40px;
     margin-top: 20px;
     margin-bottom: 70px;
     list-style: none;
@@ -413,7 +413,7 @@ form.add-walk b{
 }
 
 form.add-walk li input{
-    height: 50px;
+    height: 60px;
     width: 500px;
     margin-top: auto;
     display: flex;
@@ -422,7 +422,7 @@ form.add-walk li input{
     color:var(--text-color)
 }
 form.add-walk li .icon{
-    height: 10px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -471,7 +471,7 @@ body.dark .home .text{
         margin: auto;
         left:52%;
         width:90%;
-        height: 55%;
+        height: 70%;
     }
 
     form.add-walk li input{
