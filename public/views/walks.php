@@ -66,7 +66,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="http://localhost:8080">
                         <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
                         <span class="text nav-text">Wyloguj</span>
                     </a>
