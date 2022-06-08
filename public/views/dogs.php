@@ -90,7 +90,7 @@
 </nav>
 
     <section class="home">
-        <!-- TODO: ADD MAPS FUNCTIONALY -->
+        <!-- TODO: ALL DOGS GALERY -->
         <div class="'add-walk-container">
             <form class="add-walk">
                 <b>Dodaj spacer</b>
