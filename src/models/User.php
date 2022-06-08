@@ -66,6 +66,4 @@ class User
     {
         $this->surname = $surname;
     }
-
-
 }

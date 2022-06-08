@@ -96,11 +96,11 @@
                 <b>Dodaj spacer</b>
                 <li class="search-adress">
                     <i class="fa-solid fa-earth-europe icon"></i>
-                    <input type="text" placeholder="Podaj adres spaceru...">
+                    <input type="text" placeholder="GALERIA PSÓW">
                 </li>
                 <li class="walk-description">
                     <i class="fa-solid fa-message icon"></i>
-                    <input type="text" placeholder="Napisz krótki opis spaceru... Np. Dzisiaj jesteśmy bez smyczy!">
+                    <input type="text" placeholder="GALERIA PSÓW">
                 </li>
                 <button><img src="public/img/button_login.svg"></button>
             </form>
@@ -111,11 +111,11 @@
 
     <script>
         const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
 
 
 toggle.addEventListener("click" , () =>{
@@ -128,12 +128,12 @@ searchBtn.addEventListener("click" , () =>{
 
 modeSwitch.addEventListener("click" , () =>{
     body.classList.toggle("dark");
-    
+
     if(body.classList.contains("dark")){
         modeText.innerText = "Tryb dzienny";
     }else{
         modeText.innerText = "Tryb nocny";
-        
+
     }
 });
     </script>
@@ -142,4 +142,3 @@ modeSwitch.addEventListener("click" , () =>{
 </html>
 
 
-       

@@ -89,57 +89,58 @@
 
 </nav>
 
-    <section class="home">
-        <!-- TODO: ADD MAPS FUNCTIONALY -->
-        <div class="'add-walk-container">
-            <form class="add-walk">
-                <b>Dodaj spacer</b>
-                <li class="search-adress">
-                    <i class="fa-solid fa-earth-europe icon"></i>
-                    <input type="text" placeholder="Podaj adres spaceru...">
-                </li>
-                <li class="walk-description">
-                    <i class="fa-solid fa-message icon"></i>
-                    <input type="text" placeholder="Napisz krótki opis spaceru... Np. Dzisiaj jesteśmy bez smyczy!">
-                </li>
-                <button><img src="public/img/button_login.svg"></button>
-            </form>
-        </div>
-    </section>
+<section class="home">
+    <!-- TODO: ADD MAPS FUNCTIONALY -->
+    <div class="'add-walk-container">
+        <form class="add-walk">
+            <b>Dodaj spacer</b>
+            <li class="search-adress">
+                <i class="fa-solid fa-earth-europe icon"></i>
+                <input type="text" placeholder="USTAWIENIA">
+            </li>
+            <li class="walk-description">
+                <i class="fa-solid fa-message icon"></i>
+                <input type="text" placeholder="USTAWIENIA">
+            </li>
+            <button><img src="public/img/button_login.svg"></button>
+        </form>
+    </div>
+</section>
 
 
 
-    <script>
-        const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
+<script>
+    const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
 
 
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-})
+    toggle.addEventListener("click" , () =>{
+        sidebar.classList.toggle("close");
+    })
 
-searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-})
+    searchBtn.addEventListener("click" , () =>{
+        sidebar.classList.remove("close");
+    })
 
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Tryb dzienny";
-    }else{
-        modeText.innerText = "Tryb nocny";
-        
-    }
-});
-    </script>
+    modeSwitch.addEventListener("click" , () =>{
+        body.classList.toggle("dark");
+
+        if(body.classList.contains("dark")){
+            modeText.innerText = "Tryb dzienny";
+        }else{
+            modeText.innerText = "Tryb nocny";
+
+        }
+    });
+</script>
 
 </body>
 </html>
 
 
-       
+
+
