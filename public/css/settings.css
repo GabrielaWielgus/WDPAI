@@ -8,13 +8,14 @@ section {
 }
 .card-wrapper{
     display: flex;
-    margin-left: -15%;
+    margin-left: -45%;
 }
 .card{
     display: grid;
-    margin-left: 5%;
-    grid-template-columns: 25em;
-    grid-template-rows: 19em 19em 5em;
+    margin-top: 7%;
+    margin-left: 32%;
+    grid-template-columns: 30em;
+    grid-template-rows: 25em 7em 2em;
     grid-template-areas: "image" "text";
 
     font-family: 'Poppins', sans-serif;
@@ -28,43 +29,27 @@ section {
 }
 .card1-image{
     grid-area: image;
-    background: transparent url('../img/avatar.png');
+    background: transparent url('../img/avatar2.png');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
 }
 .card2-image{
     grid-area: image;
-    background: transparent url('../img/avatar2.png');
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-}
-.card3-image{
-    grid-area: image;
-    background: transparent url('../img/avatar3.png');
+    background: transparent url('../img/avatar.png');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
 }
 .card-text{
     grid-area: text;
-    margin: 25px;
-}
-.card-text .dog_owner{
-    color:#FFCC23;
-    font-size: 13px;
-}
-.card-text p{
-    color:grey;
-    margin-top: 30px;
-    font-size: 15px;
-    font-weight: 300;
-}
-.card-text h2{
-    margin-top: 15px;
+    margin-top: 50px;
     font-size: 28px;
 }
+a {
+    color:black;
+}
+
 .card:hover {
     transform: scale(1.2);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
@@ -73,10 +58,17 @@ section {
 @media screen and (max-width: 768px) {
     .card-wrapper{
         display:grid;
+        margin-left: 5%;
     }
     .card{
+        display: grid;
+        margin-top: 15%;
+        margin-left: unset;
         grid-template-columns: 25em;
-        grid-template-rows: 19em 19em 5em;
+        grid-template-rows: 23em 7em 2em;
+    }
+    .card-text{
+        margin-top: 5%;
     }
 }
 

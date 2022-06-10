@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/walks.css">
+    <link rel="stylesheet" href="public/css/settings_owner.css">
+
 
     <script src="https://kit.fontawesome.com/70bd267ff8.js" crossorigin="anonymous"></script>
 </head>
@@ -90,58 +91,70 @@
 
 </nav>
 
-    <section class="home">
-        <!-- TODO: ADD MAPS FUNCTIONALY -->
-        <div class="add-walk-container">
-            <form class="add-walk">
-                <li class="walk-adress">
-                    <i class="fa-solid fa-pen fa-3x"></i>
-                    <label for="fadress">Adres</label><br>
-                    <input type="text" id="fadress" name="fadress" placeholder="Szukaj według adresu...">
-                </li>
-                <li class="description-walk">
-                    <i class="fa-solid fa-message fa-3x"></i>
-                    <label for="fdescription_walk">Opis spaceru</label><br>
-                    <textarea class="textarea" placeholder="Napisz krótki opis spaceru... Dzisiaj jesteśmy bez smyczy!"></textarea>
-                </li>
-                <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
-            </form>
-        </div>
-    </section>
-
-
-
-    <script>
-        const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-
-
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-})
-
-searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-})
-
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Tryb dzienny";
-    }else{
-        modeText.innerText = "Tryb nocny";
-        
+<section class="home">
+    <?php
+    if(isset($messages)){
+        foreach ($messages as $message)  {
+            echo $message;
+        }
     }
-});
-    </script>
+    ?>
+    <div class="add-dog-container">
+        <form class="edit-owner">
+            <li class="name-owner-input">
+                <i class="fa-solid fa-pen"></i>
+                <label for="fname">Edytuj nazwę</label><br>
+                <input name="user_name" type="text" placeholder="John Doe">
+            </li>
+            <li class="email-owner">
+                <i class="fa-solid fa-user"></i>
+                <label for="femail">Edytuj email</label><br>
+                <input name="email" type="text" placeholder="email@mail.com">
+            </li>
+            <li class="password">
+                <i class="fa-solid fa-key"></i>
+                <label for="fpassword">Edytuj hasło</label><br>
+                <input name="password" type="text" placeholder="password">
+            </li>
+            <div class="messages">
+            </div>
+            <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
+        </form>
+    </div>
+</section>
 
+
+
+<script>
+    const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
+
+
+    toggle.addEventListener("click" , () =>{
+        sidebar.classList.toggle("close");
+    })
+
+    searchBtn.addEventListener("click" , () =>{
+        sidebar.classList.remove("close");
+    })
+
+    modeSwitch.addEventListener("click" , () =>{
+        body.classList.toggle("dark");
+
+        if(body.classList.contains("dark")){
+            modeText.innerText = "Tryb dzienny";
+        }else{
+            modeText.innerText = "Tryb nocny";
+
+        }
+    });
+</script>
 </body>
 </html>
 
 
-       
+

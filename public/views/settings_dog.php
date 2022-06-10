@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/walks.css">
+    <link rel="stylesheet" href="public/css/settings_dog.css">
+
 
     <script src="https://kit.fontawesome.com/70bd267ff8.js" crossorigin="anonymous"></script>
 </head>
@@ -90,58 +91,67 @@
 
 </nav>
 
-    <section class="home">
-        <!-- TODO: ADD MAPS FUNCTIONALY -->
-        <div class="add-walk-container">
-            <form class="add-walk">
-                <li class="walk-adress">
-                    <i class="fa-solid fa-pen fa-3x"></i>
-                    <label for="fadress">Adres</label><br>
-                    <input type="text" id="fadress" name="fadress" placeholder="Szukaj według adresu...">
-                </li>
-                <li class="description-walk">
-                    <i class="fa-solid fa-message fa-3x"></i>
-                    <label for="fdescription_walk">Opis spaceru</label><br>
-                    <textarea class="textarea" placeholder="Napisz krótki opis spaceru... Dzisiaj jesteśmy bez smyczy!"></textarea>
-                </li>
-                <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
-            </form>
-        </div>
-    </section>
+<section class="home">
+    <div class="add-dog-container">
+        <form class="edit-dog">
+            <!-- TODO: picture of dog -->
+            <li class="name-dog-input">
+                <i class="fa-solid fa-pen"></i>
+                <label for="fname">Edytuj imię psa</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Kira">
+            </li>
+            <li class="breed-dog">
+                <i class="fa-solid fa-user"></i>
+                <label for="fbreed">Edytuj rasę</label><br>
+                <input type="text" id="fbreed" name="fbreed" placeholder="Kundel">
+            </li>
+            <li class="gender-dog">
+                <i class="fa-solid fa-mars-and-venus"></i>
+                <label for="fgender">Edytuj płeć</label><br>
+                <input type="text" id="fgender" name="fgender" placeholder="Suczka">
+            </li>
+            <li class="description-dog">
+                <i class="fa-solid fa-message"></i>
+                <label for="fdescription">Edytuj opis</label><br>
+                <textarea class="textarea" placeholder="Napisz krótki opis swojego psiaka..."></textarea>
+            </li>
+            <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
+        </form>
+    </div>
+</section>
 
 
 
-    <script>
-        const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
+<script>
+    const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
 
 
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-})
+    toggle.addEventListener("click" , () =>{
+        sidebar.classList.toggle("close");
+    })
 
-searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-})
+    searchBtn.addEventListener("click" , () =>{
+        sidebar.classList.remove("close");
+    })
 
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Tryb dzienny";
-    }else{
-        modeText.innerText = "Tryb nocny";
-        
-    }
-});
-    </script>
+    modeSwitch.addEventListener("click" , () =>{
+        body.classList.toggle("dark");
 
+        if(body.classList.contains("dark")){
+            modeText.innerText = "Tryb dzienny";
+        }else{
+            modeText.innerText = "Tryb nocny";
+
+        }
+    });
+</script>
 </body>
 </html>
 
 
-       
+

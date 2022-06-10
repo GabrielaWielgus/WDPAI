@@ -10,6 +10,8 @@ Router::get('walks','DeafultController');
 Router::get('dogs','DeafultController');
 Router::get('add_dog','DeafultController');
 Router::get('settings','DeafultController');
+Router::get('settings_owner','DeafultController');
+Router::get('settings_dog','DeafultController');
 Router::post('login','SecurityController');
 
 Router::run($path);

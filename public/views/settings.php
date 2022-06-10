@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/settings.css">
 
     <script src="https://kit.fontawesome.com/70bd267ff8.js" crossorigin="anonymous"></script>
 </head>
@@ -90,20 +91,19 @@
 </nav>
 
 <section class="home">
-    <!-- TODO: SETTINGS VIEW -->
-    <div class="'add-walk-container">
-        <form class="add-walk">
-            <b>Dodaj spacer</b>
-            <li class="search-adress">
-                <i class="fa-solid fa-earth-europe icon"></i>
-                <input type="text" placeholder="USTAWIENIA">
-            </li>
-            <li class="walk-description">
-                <i class="fa-solid fa-message icon"></i>
-                <input type="text" placeholder="USTAWIENIA">
-            </li>
-            <button><img src="public/img/button_login.svg"></button>
-        </form>
+    <div class="card-wrapper">
+        <div class="card">
+                <div class="card1-image"></div>
+                <div class="card-text">
+                    <a href="http://localhost:8080/settings_owner" style="text-decoration:none">Ustawienia właściciela</a>
+                </div>
+        </div>
+        <div class="card">
+            <div class="card2-image"></div>
+            <div class="card-text">
+                <a href="http://localhost:8080/settings_dog" style="text-decoration:none">Ustawienia psa</a>
+            </div>
+        </div>
     </div>
 </section>
 

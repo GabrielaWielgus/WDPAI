@@ -43,7 +43,7 @@ form.add-dog label{
 }
 
 form.add-dog input{
-    height: 20%;
+    height: 22%;
     width: 70%;
     font-size: 16.5px;
     background: #223938 0% 0% no-repeat padding-box;
@@ -66,10 +66,10 @@ form.add-dog textarea{
 }
 form.add-dog button2 {
     height:40%;
-    width:50%;
+    width:52%;
     margin-top: 15%;
-    margin-left:50%;
-    margin-right:5%;
+    margin-left:55%;
+    margin-right:4%;
 
     transform: translate(-50%, -50%);
     color: #FFFFFF;

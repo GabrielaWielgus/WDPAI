@@ -31,5 +31,4 @@ class SecurityController extends AppController
         header("Location: {$url}/walks");
 
     }
-
 }

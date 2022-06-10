@@ -22,4 +22,10 @@ class DeafultController extends AppController {
     public function settings(){
         $this->render('settings');
     }
+    public function settings_owner(){
+        $this->render('settings_owner');
+    }
+    public function settings_dog(){
+        $this->render('settings_dog');
+    }
 }

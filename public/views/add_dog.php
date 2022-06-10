@@ -114,7 +114,7 @@
                 <label for="fdescription">Opis</label><br>
                 <textarea class="textarea" placeholder="Napisz krótki opis swojego psiaka..."></textarea>
             </li>
-            <button2><i class="fa-solid fa-check"></i></button2>
+            <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
         </form>
     </div>
 </section>
