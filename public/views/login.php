@@ -12,7 +12,7 @@
         <div class="logo">
             <img src="public/img/logo.svg">
         </div>
-        <div class="'login-container">
+        <div class="login-container">
             <form class="login" action="login" method="POST">
                 <b>Zaloguj się</b>
                 <div class="messages">
@@ -27,7 +27,7 @@
                 <input name="user_name" type="text" placeholder="John Doe">
                 <input name="email" type="text" placeholder="email@mail.com">
                 <input name="password" type="password" placeholder="password">
-                <button type="submit"><img src="public/img/button_login.svg"></button>
+                <button type="submit"><i class="fa-solid fa-check"></i></button>
             </form>
         </div>
     </div>

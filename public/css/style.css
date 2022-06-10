@@ -9,8 +9,6 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,7 +26,7 @@ body {
 }
 form.login {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 70%;
     width: 40%;
     height: 60%;
@@ -43,23 +41,60 @@ form.login {
     box-shadow: inset 0px 6px 6px #00000029;
     border-radius: 33px;
 }
+button {
+    position: absolute;
+    top: 75%;
+    left: 42%;
+    height: 10%;
+    width:40%;
+    transform: translate(-50%, -50%);
+    font: normal normal 300 30px/41px Arial;
+    color: #FFFFFF;
+    background: #A46C5D 0% 0% no-repeat padding-box;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 55px;
+    font-size: 35px;
+    opacity: 1;
+    border: none;
+    margin: 2em;
+    cursor:pointer;
+}
+
+button:hover {
+    transition-duration: 0.1s;
+    background-color: #a7877c;
+}
+
+button:after {
+    content:"";
+    display:block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    transition: all 0.5s;
+    box-shadow: 0 0 40px 40px white;
+}
+
+button:active:after {
+    box-shadow: 0 0 0 0 #a7877c;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 1s;
+}
 
 b {
-    text-align: left;
-    font: normal normal normal 40px/45px Arial;
+    font: normal normal normal 40px/5px Arial;
     letter-spacing: 0px;
     color: #FFFCF5;
     text-align: center;
-    margin-bottom: 1em;
-    margin-top: 2em;
-}
-
-button {
-    background: transparent;
-    width: 34%;
-    height: 30%;
-    border: none;
-    margin: 2em;
+    margin-bottom: 3em;
 }
 
 input {
@@ -72,7 +107,6 @@ input {
     padding: 1em;
     margin: 0.3em;
     border-radius: 10px;
-    top: 225px;
     width: 60%;
     height: 2%;
 }

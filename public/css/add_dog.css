@@ -1,0 +1,136 @@
+section {
+    margin: 0;
+    background: transparent url('../img/Add_dog_website_background.png');
+}
+form.add-dog{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 33%;
+    height: 60em;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 3px 6px #00000029;
+    opacity: 1;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 33px;
+}
+
+form.add-dog li{
+    height: 100%;
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFCF5 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    opacity: 1;
+    font-size: 150%;
+    color: var(--icon-color);
+}
+form.add-dog label{
+    font-size: 16.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--text-color)
+}
+
+form.add-dog input{
+    height: 20%;
+    width: 70%;
+    font-size: 16.5px;
+    background: #223938 0% 0% no-repeat padding-box;
+    border-radius: 11px;
+    opacity: 1;
+    color:var(--text-color)
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    line-height:5em;
+}
+form.add-dog textarea{
+    height: 45%;
+    width: 90%;
+    font-size: 16.5px;
+    background: #223938 0% 0% no-repeat padding-box;
+    border-radius: 11px;
+    opacity: 1;
+    color:var(--text-color);
+}
+form.add-dog button2 {
+    height:40%;
+    width:50%;
+    margin-top: 15%;
+    margin-left:50%;
+    margin-right:5%;
+
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    background: #A46C5D 0% 0% no-repeat padding-box;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 55px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 2.5em;
+    opacity: 1;
+    border: none;
+    cursor:pointer;
+}
+
+form.add-dog button2:hover {
+    transition-duration: 0.1s;
+    background-color: #a7877c;
+}
+
+form.add-dog button2:after {
+    content:"";
+    display:block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    transition: all 0.5s;
+    box-shadow: 0 0 40px 40px white;
+}
+
+form.add-dog button2:active:after {
+    box-shadow: 0 0 0 0 #a7877c;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 1s;
+}
+@media only screen and (max-width: 1112px) {
+    form.add-dog{
+        top: 50%;
+        left: 52%;
+        width: 90%;
+        height: 97%;
+    }
+    form.add-dog li{
+        height: 80%;
+        width: 80%;
+        margin-bottom: 1%;
+    }
+    form.add-dog button2 {
+        height:20%;
+        width:50%;
+        line-height: 0.5em;
+    }
+    ::-webkit-input-placeholder {
+        text-align: center;
+        line-height:1.5em;
+    }
+}

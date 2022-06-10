@@ -92,7 +92,7 @@
 
     <section class="home">
         <!-- TODO: ADD MAPS FUNCTIONALY -->
-        <div class="'add-walk-container">
+        <div class="add-walk-container">
             <form class="add-walk">
                 <b>Dodaj spacer</b>
                 <li class="search-adress">
@@ -103,7 +103,7 @@
                     <i class="fa-solid fa-message icon"></i>
                     <input type="text" placeholder="Napisz krótki opis spaceru... Np. Dzisiaj jesteśmy bez smyczy!">
                 </li>
-                <button><img src="public/img/button_login.svg"></button>
+                <button><i class="fa-solid fa-check"></i></button>
             </form>
         </div>
     </section>
