@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script src="https://kit.fontawesome.com/70bd267ff8.js" crossorigin="anonymous"></script>
     <title>LOGIN PAGE</title>
 </head>
 

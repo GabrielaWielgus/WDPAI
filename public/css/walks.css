@@ -32,12 +32,13 @@ form.add-walk label{
 }
 
 form.add-walk input{
-    height: 22%;
+    height: 30%;
     width: 90%;
-    margin-top: 5%;
+    margin-top: 8%;
     font-size: 16.5px;
     background: #223938 0% 0% no-repeat padding-box;
-    border-radius: 11px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 50px;
     opacity: 1;
     color:var(--text-color)
 }
@@ -46,11 +47,13 @@ form.add-walk input{
     line-height:5.5em;
 }
 form.add-walk textarea{
-    height: 45%;
-    width: 90%;
+    height: 50%;
+    width: 99%;
+    margin-top: 5%;
     font-size: 16.5px;
     background: #223938 0% 0% no-repeat padding-box;
-    border-radius: 11px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 25px;
     opacity: 1;
     color:var(--text-color);
 }
