@@ -13,6 +13,7 @@ Router::get('settings_owner','DeafultController');
 Router::get('settings_dog','DeafultController');
 Router::post('login','SecurityController');
 Router::post('addDog','AddDogController');
+Router::post('register','SecurityController');
 
 Router::run($path);
 

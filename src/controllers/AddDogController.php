@@ -2,6 +2,8 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/Dog.php';
+require_once __DIR__.'/../repository/DogRepository.php';
+
 
 class AddDogController extends AppController {
 
@@ -10,6 +12,13 @@ class AddDogController extends AppController {
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $message = [];
+    private $dogRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->dogRepository = new DogRepository();
+    }
 
     public function addDog()
     {
@@ -19,9 +28,8 @@ class AddDogController extends AppController {
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            // TODO create new project object and save it in database
             $dog = new Dog($_POST['dog_name'], $_POST['breed'], $_POST['gender'],$_POST['description'], $_FILES['file']['name']);
-
+            $this->dogRepository->addDog($dog);
             return $this->render('dogs', ['messages' => $this->message, 'dog' => $dog]);
         }
         return $this->render('addDog', ['messages' => $this->message]);

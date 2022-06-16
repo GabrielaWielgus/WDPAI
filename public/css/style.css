@@ -434,6 +434,26 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
+form h3{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top:10px;
+}
+
+form .text h3{
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+form .text h3 a{
+    color: #4070f4;
+    text-decoration: none;
+}
+form .text h3 a:hover{
+    text-decoration: underline;
+}
 
 /*--------------------------------*/
 @media only screen and (max-width: 1112px) {

@@ -28,6 +28,9 @@
                 <input name="user_name" type="text" placeholder="John Doe">
                 <input name="email" type="text" placeholder="email@mail.com">
                 <input name="password" type="password" placeholder="password">
+                <div class="text">
+                    <h3>Nie masz konta? <a href="http://localhost:8080/register">Zarejestruj się</a></h3>
+                </div>
                 <button type="submit"><i class="fa-solid fa-check"></i></button>
             </form>
         </div>

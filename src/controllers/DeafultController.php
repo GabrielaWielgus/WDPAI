@@ -28,4 +28,7 @@ class DeafultController extends AppController {
     public function settings_dog(){
         $this->render('settings_dog');
     }
+    public function register(){
+        $this->render('register');
+    }
 }
