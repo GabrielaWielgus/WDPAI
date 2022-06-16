@@ -2,6 +2,7 @@
 
 require_once 'src/controllers/DeafultController.php';
 require_once 'src/controllers/SecurityController.php';
+require_once 'src/controllers/AddDogController.php';
 
 class Router {
     

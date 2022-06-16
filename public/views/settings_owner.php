@@ -36,7 +36,7 @@
 
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="http://localhost:8080/add_dog">
+                    <a href="http://localhost:8080/addDog">
                         <i class="fa-solid fa-dog icon"></i>
                         <span class="text nav-text">Dodaj psa</span>
                     </a>

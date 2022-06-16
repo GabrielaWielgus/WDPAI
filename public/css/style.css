@@ -45,7 +45,7 @@ form.login {
 button {
     height:13%;
     width:40%;
-    margin-top: 17%;
+    margin-top: 8%;
     margin-left:40%;
     margin-right:4%;
 
@@ -56,7 +56,6 @@ button {
     border-radius: 55px;
     font-size: 35px;
     text-align: center;
-    line-height: 2.5em;
     opacity: 1;
     border: none;
     cursor:pointer;

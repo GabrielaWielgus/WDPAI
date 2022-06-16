@@ -35,7 +35,7 @@
 
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="http://localhost:8080/add_dog">
+                    <a href="http://localhost:8080/addDog">
                         <i class="fa-solid fa-dog icon"></i>
                         <span class="text nav-text">Dodaj psa</span>
                     </a>
@@ -92,29 +92,40 @@
 
 <section class="home">
     <div class="add-dog-container">
-        <form class="add-dog">
-            <!-- TODO: picture of dog -->
+        <form class="add-dog" action="addDog" method="POST" ENCTYPE="multipart/form-data">
+            <div class="messages">
+                <?php
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
             <li class="name-dog-input">
                 <i class="fa-solid fa-pen"></i>
-                <label for="fname">Imię psa</label><br>
-                <input type="text" id="fname" name="fname" placeholder="Kira">
+                <label for="dog_name">Imię psa</label><br>
+                <input name="dog_name" type="text" placeholder="Kira">
             </li>
             <li class="breed-dog">
                 <i class="fa-solid fa-user"></i>
-                <label for="fbreed">Rasa</label><br>
-                <input type="text" id="fbreed" name="fbreed" placeholder="Kundel">
+                <label for="breed">Rasa</label><br>
+                <input type="text" id="breed" name="breed" placeholder="Kundel">
             </li>
             <li class="gender-dog">
                 <i class="fa-solid fa-mars-and-venus"></i>
-                <label for="fgender">Płeć</label><br>
-                <input type="text" id="fgender" name="fgender" placeholder="Suczka">
+                <label for="gender">Płeć</label><br>
+                <input type="text" id="gender" name="gender" placeholder="Suczka">
             </li>
             <li class="description-dog">
                 <i class="fa-solid fa-message"></i>
-                <label for="fdescription">Opis</label><br>
-                <textarea class="textarea" placeholder="Napisz krótki opis swojego psiaka..."></textarea>
+                <label for="description">Opis</label><br>
+                <textarea class="textarea" name="description" placeholder="Napisz krótki opis swojego psiaka..."></textarea>
             </li>
-            <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
+
+            <input type="file" name="file"/><br/>
+
+            <button type="submit"><i class="fa-solid fa-check"></i></button>
         </form>
     </div>
 </section>

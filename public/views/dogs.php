@@ -35,7 +35,7 @@
 
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="http://localhost:8080/add_dog">
+                    <a href="http://localhost:8080/addDog">
                         <i class="fa-solid fa-dog icon"></i>
                         <span class="text nav-text">Dodaj psa</span>
                     </a>
@@ -93,27 +93,40 @@
     <section class="home">
         <div class="card-wrapper">
             <div class="card">
-                <div class="card1-image"></div>
+                <div class="card1-image">
+                    <style>
+                        .card1-image{
+                        background-image: url("public/uploads/<?= $dog->getImage() ?>")}
+                    </style>
+                </div>
                 <div class="card-text">
                     <span class="dog_owner">Anna Kowalska</span>
-                    <h2>Burek</h2>
-                    <p>Burek jest super pieskiem</p>
+                    <h2><?= $dog -> getDogName() ?></h2>
+                    <p><?= $dog -> getDescription() ?></p>
                 </div>
             </div>
             <div class="card">
                 <div class="card2-image"></div>
+                <style>
+                    .card2-image{
+                        background-image: url("public/uploads/<?= $dog->getImage() ?>")}
+                </style>
                 <div class="card-text">
                     <span class="dog_owner">Asia Neil</span>
-                    <h2>Kira</h2>
-                    <p>Kira jest super pieskiem</p>
+                    <h2><?= $dog -> getDogName() ?></h2>
+                    <p><?= $dog -> getDescription() ?></p>
                 </div>
             </div>
             <div class="card">
                 <div class="card3-image"></div>
+                <style>
+                    .card3-image{
+                        background-image: url("public/uploads/<?= $dog->getImage() ?>")}
+                </style>
                 <div class="card-text">
                     <span class="dog_owner">Anna Nowak</span>
-                    <h2>Franek</h2>
-                    <p>Franek jest super pieskiem</p>
+                    <h2><?= $dog -> getDogName() ?></h2>
+                    <p><?= $dog -> getDescription() ?></p>
                 </div>
             </div>
         </div>

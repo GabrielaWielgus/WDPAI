@@ -28,21 +28,18 @@ section {
 }
 .card1-image{
     grid-area: image;
-    background: transparent url('../img/avatar.png');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
 }
 .card2-image{
     grid-area: image;
-    background: transparent url('../img/avatar2.png');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
 }
 .card3-image{
     grid-area: image;
-    background: transparent url('../img/avatar3.png');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
