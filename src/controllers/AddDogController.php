@@ -20,6 +20,24 @@ class AddDogController extends AppController {
         $this->dogRepository = new DogRepository();
     }
 
+    public function search(){
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+        if($contentType === "application/json"){
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content,true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+
+            echo json_encode($this->dogRepository->getDogByNameByDescription($decoded['search']));
+        }
+    }
+
+    public function dogs(){
+        $dogs = $this->dogRepository->getDogs();
+        $this->render('dogs',['dogs'=>$dogs]);
+    }
+
     public function addDog()
     {
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -49,10 +67,5 @@ class AddDogController extends AppController {
             return false;
         }
         return true;
-    }
-
-    public function dogs(){
-        $dogs = $this->dogRepository->getDogs();
-        $this->render('dogs',['dogs'=>$dogs]);
     }
 }

@@ -3,6 +3,9 @@
 require_once 'src/controllers/DeafultController.php';
 require_once 'src/controllers/SecurityController.php';
 require_once 'src/controllers/AddDogController.php';
+require_once 'src/controllers/WalksController.php';
+require_once 'src/controllers/SessionController.php';
+require_once 'src/controllers/PermissionController.php';
 
 class Router {
     
@@ -17,10 +20,25 @@ class Router {
     }
 
     public static function run($url){
-        $action = explode("/", $url)[0];
+        $sessionControl = new SessionController();
 
-        if(!array_key_exists($action, self::$routes)){
-            die("Wrong URL");
+        $perimsionControll = new permissionController();
+
+        //Sprawdzenie czy użytkownik jest zalogowany, jeśli nie to przeniesienie go na stronę logowania
+        if(!$sessionControl->checkCookieWithDatabase()){
+            $url = "login";
+        }elseif ($url === 'login'){
+            $url = '';
+        }
+
+        if($url==='adminPanel' and !$perimsionControll->isUserAdmin()){
+            $url = 'errorPage';
+        }
+
+        $action = explode("/", $url)[0];
+        if (!array_key_exists($action, self::$routes)) {
+            $url = "errorPage";
+            $action = explode("/", $url)[0];
         }
 
         $controller = self::$routes[$action];

@@ -1,103 +1,32 @@
+<?php
+require_once __DIR__.'/../../src/models/Dog.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet'>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/walks.css">
-
     <script src="https://kit.fontawesome.com/70bd267ff8.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<nav class="sidebar close">
-    <header>
-        <div class="image-text">
-                <span class="image">
-                    <!--<img src="logo.png" alt="">-->
-                </span>
-
-            <div class="text logo-text">
-                <span class="name">Dog Name</span>
-            </div>
-        </div>
-
-        <i class="fa-solid fa-arrow-right toggle"></i>
-    </header>
-
-    <div class="menu-bar">
-        <div class="menu">
-
-            <li class="search-box">
-                <i class="fa-solid fa-magnifying-glass icon"></i>
-                <input type="text" placeholder="Wyszukaj...">
-            </li>
-
-            <ul class="menu-links">
-                <li class="nav-link">
-                    <a href="http://localhost:8080/addDog">
-                        <i class="fa-solid fa-dog icon"></i>
-                        <span class="text nav-text">Dodaj psa</span>
-                    </a>
-                </li>
-
-                <li class="nav-link">
-                    <a href="http://localhost:8080/walks">
-                        <i class="fa-solid fa-shoe-prints icon"></i>
-                        <span class="text nav-text">Dodaj spacer</span>
-                    </a>
-                </li>
-
-                <li class="nav-link">
-                    <a href="http://localhost:8080/dogs">
-                        <i class="fa-solid fa-paw icon"></i>
-                        <span class="text nav-text">Znane psiaki</span>
-                    </a>
-                </li>
-
-                <li class="nav-link">
-                    <a href="http://localhost:8080/settings">
-                        <i class="fa-solid fa-gear icon"></i>
-                        <span class="text nav-text">Ustawienia</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div class="bottom-content">
-            <li class="">
-                <a href="http://localhost:8080">
-                    <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
-                    <span class="text nav-text">Wyloguj</span>
-                </a>
-            </li>
-
-            <li class="mode">
-                <div class="sun-moon">
-                    <i class="fa-solid fa-moon icon moon"></i>
-                    <i class="fa-solid fa-sun icon sun"></i>
-                </div>
-                <span class="mode-text text">Tryb nocny</span>
-
-                <div class="toggle-switch">
-                    <span class="switch"></span>
-                </div>
-            </li>
-
-        </div>
-    </div>
-
-</nav>
-
+<?php require_once __DIR__.'/../../public/views/sideBar.php'; ?>
     <section class="home">
-        <!-- TODO: ADD MAPS FUNCTIONALY -->
+        <div id='map'></div>
         <div class="add-walk-container">
             <form class="add-walk">
                 <li class="walk-adress">
                     <i class="fa-solid fa-pen fa-3x"></i>
                     <label for="fadress">Adres</label><br>
-                    <input type="text" id="fadress" name="fadress" placeholder="Szukaj według adresu...">
+                    <div id="geocoder" class="geocoder"></div>
                 </li>
                 <li class="description-walk">
                     <i class="fa-solid fa-message fa-3x"></i>
@@ -111,37 +40,9 @@
 
 
 
-    <script>
-        const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-
-
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-})
-
-searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-})
-
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Tryb dzienny";
-    }else{
-        modeText.innerText = "Tryb nocny";
-        
-    }
-});
-    </script>
-
+<script type="text/javascript" src="./public/js/sideBar.js" defer></script>
+<script type="text/javascript" src="./public/js/map.js" defer></script>
 </body>
 </html>
 
 
-       

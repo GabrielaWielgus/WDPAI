@@ -4,10 +4,10 @@ require_once 'AppController.php';
 require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
 
+
 class SecurityController extends AppController
 {
     private $userRepository;
-
 
     public function __construct()
     {
@@ -17,6 +17,8 @@ class SecurityController extends AppController
 
     public function login()
     {
+        $sessionControl = new SessionController();
+
         if (!$this->isPost()) {
             return $this->render('login');
         }
@@ -38,6 +40,8 @@ class SecurityController extends AppController
         if (!password_verify($password,$password_to_verify)){
             return $this->render('login', ['messages' => ['Wrong password']]);
         }
+
+        $sessionControl->setCookie($user->getEmail());
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/walks");
@@ -61,12 +65,18 @@ class SecurityController extends AppController
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        //TODO try to use better hash function
         $user = new User($email, password_hash($password,PASSWORD_DEFAULT), $user_name, $name, $surname);
         $user->setPhone($phone);
 
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+    }
+    public function logout()
+    {
+        $sessionControl = new SessionController();
+        $sessionControl->deleteCoockieInDatabase();
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/");
     }
 }
