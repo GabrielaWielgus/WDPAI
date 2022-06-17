@@ -16,7 +16,9 @@ Router::post('addDog','AddDogController');
 Router::post('register','SecurityController');
 Router::post('search','AddDogController');
 Router::post('places','WalksController');
+Router::post('add_place','WalksController');
 Router::get('logout', 'SecurityController');
+
 Router::run($path);
 
 

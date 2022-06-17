@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/../../src/models/Dog.php';
+require_once __DIR__.'/../../src/models/Place.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,18 +22,23 @@ require_once __DIR__.'/../../src/models/Dog.php';
     <section class="home">
         <div id='map'></div>
         <div class="add-walk-container">
-            <form class="add-walk">
+            <form class="add-walk" action="add_place" method="POST">
                 <li class="walk-adress">
                     <i class="fa-solid fa-pen fa-3x"></i>
-                    <label for="fadress">Adres</label><br>
+                    <label for="geocoder">Adres</label><br>
                     <div id="geocoder" class="geocoder"></div>
+                </li>
+                <li class="walk-title">
+                    <i class="fa-brands fa-pagelines"></i>
+                    <label for="title">Tytuł</label><br>
+                    <input name="title" type="text" placeholder="Tytuł znacznika">
                 </li>
                 <li class="description-walk">
                     <i class="fa-solid fa-message fa-3x"></i>
-                    <label for="fdescription_walk">Opis spaceru</label><br>
-                    <textarea class="textarea" placeholder="Napisz krótki opis spaceru... Dzisiaj jesteśmy bez smyczy!"></textarea>
+                    <label for="description_walk">Opis spaceru lub miejsca</label><br>
+                    <textarea name="description" class="textarea" placeholder="Napisz krótki opis spaceru... Np. Dzisiaj jesteśmy bez smyczy!"></textarea>
                 </li>
-                <button2 type="submit"><i class="fa-solid fa-check"></i></button2>
+                <button type="submit"><i class="fa-solid fa-check"></i></button>
             </form>
         </div>
     </section>

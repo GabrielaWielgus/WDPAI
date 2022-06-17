@@ -46,7 +46,7 @@ class DogRepository extends Repository
     {
         $result = [];
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM dogs
+            SELECT * FROM all_dogs;
         ');
         $stmt->execute();
         $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -27,4 +27,16 @@ class WalksController extends AppController {
         echo json_encode($this->placeRepository->getPlaces());
 
     }
+    public function add_place(){
+        if (!$this->isPost()) {
+            return $this->render('walks');
+        }
+        $title = $_POST['title'];
+        $description = $_POST['description'];
+        $coordinates = $_POST["geocoder"];
+
+        $place = new Place($title,$description,$coordinates);
+        $this->placeRepository->addPlace($place);
+
+    }
 }

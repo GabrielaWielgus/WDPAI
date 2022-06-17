@@ -7,7 +7,7 @@ class PlaceRepository extends Repository
     public function getPlaces(): array
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM places
+            SELECT * FROM all_places
         ');
         $stmt->execute();
 
@@ -17,7 +17,7 @@ class PlaceRepository extends Repository
     public function addPlace(Place $place): void {
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO place (title,description,coordinates)
+            INSERT INTO places (title,description,coordinates)
             VALUES (?,?,?)
         ');
         $stmt->execute([

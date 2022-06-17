@@ -15,8 +15,22 @@ document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 
 geocoder.on('result', function(e) {
-    console.log(e.result.center)
-    //w tym miejscu mam coordynaty wprowadzone w search -> dodać do bazy danych jako place
+    coordinates = e.result.center//tablica [,] koordynatow
+    console.log(coordinates)
+    document.querySelector('.add-walk').addEventListener('submit', e =>{
+        e.preventDefault();
+        let form = document.querySelector('.add-walk');
+        const data = new URLSearchParams();
+        for(const p of new FormData(form)){
+            data.append(p[0],p[1]); //dodanie koordynatów zmienna coordinates?
+        }
+        fetch("/add_place",{
+            method:"POST",
+            body: data
+        }).then(response => response.text()).then(response => {
+            console.log(response);
+        }).catch(error => console.log(error));
+    });
 })
 
 fetch("/places", {
