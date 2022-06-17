@@ -16,6 +16,13 @@ form.register {
     border-radius: 33px;
 }
 
+.no-valid{
+    border: 2px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
 
 @media only screen and (max-width: 1112px) {
 

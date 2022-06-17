@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/register.css">
     <script src="https://kit.fontawesome.com/70bd267ff8.js" crossorigin="anonymous"></script>
-
     <title>REGISTER</title>
 </head>
 
@@ -45,3 +44,5 @@
     </div>
 </div>
 </body>
+
+<script type="text/javascript" src="./public/js/script.js"></script>
