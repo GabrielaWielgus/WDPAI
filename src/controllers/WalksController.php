@@ -33,7 +33,7 @@ class WalksController extends AppController {
         }
         $title = $_POST['title'];
         $description = $_POST['description'];
-        $coordinates = $_POST["geocoder"];
+        $coordinates = $_POST['coordinates'];
 
         $place = new Place($title,$description,$coordinates);
         $this->placeRepository->addPlace($place);

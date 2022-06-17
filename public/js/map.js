@@ -13,24 +13,12 @@ const geocoder = new MapboxGeocoder({
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
+let Coordinates = {point:['','']}
 
 geocoder.on('result', function(e) {
-    coordinates = e.result.center//tablica [,] koordynatow
+    let coordinates = e.result.center//tablica [,] koordynatow
     console.log(coordinates)
-    document.querySelector('.add-walk').addEventListener('submit', e =>{
-        e.preventDefault();
-        let form = document.querySelector('.add-walk');
-        const data = new URLSearchParams();
-        for(const p of new FormData(form)){
-            data.append(p[0],p[1]); //dodanie koordynatów zmienna coordinates?
-        }
-        fetch("/add_place",{
-            method:"POST",
-            body: data
-        }).then(response => response.text()).then(response => {
-            console.log(response);
-        }).catch(error => console.log(error));
-    });
+    Coordinates.point = [coordinates[0],coordinates[1]]
 })
 
 fetch("/places", {
@@ -42,6 +30,33 @@ fetch("/places", {
         place.coordinates = JSON.parse(place.coordinates);
     })
     displayPlaces(places);
+});
+
+
+document.querySelector('.add-walk').addEventListener('submit', e =>{
+    e.preventDefault();
+    let form = document.querySelector('.add-walk');
+    const data = {
+        title:"",
+        description:"",
+        coordinates: Coordinates
+    };
+    for(const p of new FormData(form)){
+        console.log(p)
+        data[p[0]]=p[1]
+    }
+    console.log(data)
+    let formData = new FormData();
+    formData.append('title', data.title);
+    formData.append('description', data.description);
+    formData.append('coordinates', JSON.stringify(data.coordinates));
+
+    fetch("/add_place",{
+        method:"POST",
+        body: formData
+    }).then(response => response.text()).then(response => {
+        console.log(response);
+    }).catch(error => console.log(error));
 });
 
 function displayPlaces(places) {

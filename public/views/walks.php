@@ -22,7 +22,7 @@ require_once __DIR__.'/../../src/models/Place.php';
     <section class="home">
         <div id='map'></div>
         <div class="add-walk-container">
-            <form class="add-walk" action="add_place" method="POST">
+            <form class="add-walk">
                 <li class="walk-adress">
                     <i class="fa-solid fa-pen fa-3x"></i>
                     <label for="geocoder">Adres</label><br>
