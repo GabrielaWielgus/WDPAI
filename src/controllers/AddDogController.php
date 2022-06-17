@@ -30,7 +30,9 @@ class AddDogController extends AppController {
 
             $dog = new Dog($_POST['dog_name'], $_POST['breed'], $_POST['gender'],$_POST['description'], $_FILES['file']['name']);
             $this->dogRepository->addDog($dog);
-            return $this->render('dogs', ['messages' => $this->message, 'dog' => $dog]);
+            return $this->render('dogs', [
+                'dogs' =>$this->dogRepository->getDogs(),
+                'messages' => $this->message]);
         }
         return $this->render('addDog', ['messages' => $this->message]);
     }
@@ -47,5 +49,10 @@ class AddDogController extends AppController {
             return false;
         }
         return true;
+    }
+
+    public function dogs(){
+        $dogs = $this->dogRepository->getDogs();
+        $this->render('dogs',['dogs'=>$dogs]);
     }
 }

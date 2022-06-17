@@ -42,4 +42,25 @@ class DogRepository extends Repository
             $dog->getImage()
         ]);
     }
+    public function getDogs(): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM dogs
+        ');
+        $stmt->execute();
+        $dogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($dogs as $dog) {
+            $result[] = new Dog(
+                $dog['dog_name'],
+                $dog['breed'],
+                $dog['gender'],
+                $dog['description'],
+                $dog['image']
+            );
+        }
+        return $result;
+    }
+
 }

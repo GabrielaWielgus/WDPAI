@@ -7,7 +7,7 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Router::get('','DeafultController');
 Router::get('walks','DeafultController');
-Router::get('dogs','DeafultController');
+Router::get('dogs','AddDogController');
 Router::get('settings','DeafultController');
 Router::get('settings_owner','DeafultController');
 Router::get('settings_dog','DeafultController');

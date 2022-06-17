@@ -92,49 +92,25 @@
 
     <section class="home">
         <div class="card-wrapper">
+            <?php foreach ($dogs as $dog): ?>
             <div class="card">
-                <div class="card1-image">
-                    <style>
-                        .card1-image{
-                        background-image: url("public/uploads/<?= $dog->getImage() ?>")}
-                    </style>
+                <div class="card-image" style=" background-image: url('public/uploads/<?php echo $dog->getImage(); ?>');">
                 </div>
                 <div class="card-text">
-                    <span class="dog_owner">Anna Kowalska</span>
+                    <span class="dog_breed"><?= $dog -> getBreed() ?></span>
+                    <span class="dog_gender"><?= $dog -> getGender() ?></span>
                     <h2><?= $dog -> getDogName() ?></h2>
                     <p><?= $dog -> getDescription() ?></p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card2-image"></div>
-                <style>
-                    .card2-image{
-                        background-image: url("public/uploads/<?= $dog->getImage() ?>")}
-                </style>
-                <div class="card-text">
-                    <span class="dog_owner">Asia Neil</span>
-                    <h2><?= $dog -> getDogName() ?></h2>
-                    <p><?= $dog -> getDescription() ?></p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card3-image"></div>
-                <style>
-                    .card3-image{
-                        background-image: url("public/uploads/<?= $dog->getImage() ?>")}
-                </style>
-                <div class="card-text">
-                    <span class="dog_owner">Anna Nowak</span>
-                    <h2><?= $dog -> getDogName() ?></h2>
-                    <p><?= $dog -> getDescription() ?></p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
 
 
 
     <script>
+
         const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),

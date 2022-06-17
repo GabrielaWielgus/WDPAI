@@ -36,7 +36,7 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['User with this email not exist']]);
         }
         if (!password_verify($password,$password_to_verify)){
-            return $this->render('login', ['messages' => ['Wrong password'.$password]]);
+            return $this->render('login', ['messages' => ['Wrong password']]);
         }
 
         $url = "http://$_SERVER[HTTP_HOST]";

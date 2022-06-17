@@ -12,7 +12,7 @@ section {
 }
 .card{
     display: grid;
-    margin-left: 5%;
+    margin-left: 7%;
     grid-template-columns: 25em;
     grid-template-rows: 19em 19em 5em;
     grid-template-areas: "image" "text";
@@ -24,21 +24,9 @@ section {
     text-align: center;
 
     transition:0.5s ease;
-    cursor:pointer;
 }
-.card1-image{
-    grid-area: image;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-}
-.card2-image{
-    grid-area: image;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-}
-.card3-image{
+
+.card-image{
     grid-area: image;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -48,7 +36,11 @@ section {
     grid-area: text;
     margin: 25px;
 }
-.card-text .dog_owner{
+.card-text .dog_breed{
+    color:#FFCC23;
+    font-size: 13px;
+}
+.card-text .dog_gender{
     color:#FFCC23;
     font-size: 13px;
 }
@@ -72,8 +64,10 @@ section {
         display:grid;
     }
     .card{
-        grid-template-columns: 25em;
-        grid-template-rows: 19em 19em 5em;
+        margin-left: 15%;
+        margin-top: 5%;
+        grid-template-columns: 22em;
+        grid-template-rows: 15em 15em 4em;
     }
 }
 

@@ -11,10 +11,6 @@ class DeafultController extends AppController {
         $this->render('walks');
     }
 
-    public function dogs(){
-        $this->render('dogs');
-    }
-
     public function addDog(){
         $this->render('addDog');
     }
