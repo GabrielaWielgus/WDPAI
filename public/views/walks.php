@@ -38,7 +38,7 @@ require_once __DIR__.'/../../src/models/Place.php';
                     <label for="description_walk">Opis spaceru lub miejsca</label><br>
                     <textarea name="description" class="textarea" placeholder="Napisz krótki opis spaceru... Np. Dzisiaj jesteśmy bez smyczy!"></textarea>
                 </li>
-                <button type="submit"><i class="fa-solid fa-check"></i></button>
+                <button type="submit" onClick="window.location.reload();"><i class="fa-solid fa-check"></i></button>
             </form>
         </div>
     </section>
