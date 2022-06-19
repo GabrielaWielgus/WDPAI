@@ -20,7 +20,7 @@
         }
     }
     ?>
-    <div class="add-dog-container">
+    <div class="edit-owner-container">
         <form class="edit-owner">
             <li class="name-owner-input">
                 <i class="fa-solid fa-pen"></i>

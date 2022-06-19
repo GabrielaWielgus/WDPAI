@@ -8,12 +8,12 @@ section {
 }
 .card-wrapper{
     display: flex;
-    margin-left: -45%;
+    margin-left: -40%;
 }
 .card{
     display: grid;
     margin-top: 7%;
-    margin-left: 32%;
+    margin-left: 20%;
     grid-template-columns: 30em;
     grid-template-rows: 25em 7em 2em;
     grid-template-areas: "image" "text";

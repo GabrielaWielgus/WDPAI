@@ -13,7 +13,7 @@
 <body>
 <?php require_once __DIR__.'/../../public/views/sideBar.php'; ?>
 <section class="home">
-    <div class="add-dog-container">
+    <div class="edit-dog-container">
         <form class="edit-dog">
             <!-- TODO: picture of dog -->
             <li class="name-dog-input">
