@@ -11,5 +11,11 @@ An application created with Mapbox allows adding marks for walks with your dog.
 
 ## Technologies
 
+* PHP:7.4.3
+* JavaScript
+* HTML
+* NGINX:1.17.8
+* Docker
+
 ## Setup
 
