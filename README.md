@@ -10,7 +10,7 @@ An application created with Mapbox allows adding marks for walks with your dog.
 ## General info
 
 The app allows dog owners to add markers to maps that represent their stay on a walk.
-![Algorithm schema](/public/img/walks_screen.png)
+![Algorithm schema](/public/img/walks_map_screen.png)
 View with dog addition:
 ![Algorithm schema](/public/img/add_dog_screen.png)
 
