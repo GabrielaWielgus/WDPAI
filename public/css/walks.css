@@ -82,12 +82,12 @@ form.add-walk label{
 
 ::-webkit-input-placeholder {
     text-align: center;
-    line-height: 3em;
+    line-height: 3.5em;
 }
 form.add-walk textarea{
     height: 50%;
     width: 100%;
-    font-size: 14px;
+    font-size: 16.5px;
     background: #223938 0% 0% no-repeat padding-box;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     border-radius: 20px;
